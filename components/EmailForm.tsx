@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 export default function EmailForm() {
   const [email, setEmail] = useState("")
@@ -17,17 +15,17 @@ export default function EmailForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <Input
+      <input
         type="email"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="bg-zinc-50"
+        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
       />
-      <Button type="submit" className="w-full">
+      <button type="submit" className="w-full px-3 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none">
         Subscribe to Updates
-      </Button>
+      </button>
       {message && <p className="text-sm text-center text-green-600 bg-green-100 p-2 rounded">{message}</p>}
     </form>
   )
