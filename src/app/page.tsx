@@ -1,8 +1,6 @@
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import EventList from "@/components/EventList"
-
-const EmailForm = dynamic(() => import("@/components/EmailForm"), { ssr: false })
+import EmailForm from "@/components/EmailForm"
 
 export default function Home() {
   return (
