@@ -1,6 +1,7 @@
 import Image from "next/image"
 import EventList from "../../components/EventList"
-import EmailForm from "../../components/EmailForm"
+import EmailForm from "@/components/EmailForm"
+
 
 export default function Home() {
   return (
